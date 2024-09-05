@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Oído</title>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4faff;
+        color: #333;
+      }
+
+      header {
+        text-align: center;
+        padding: 40px 20px;
+        background: linear-gradient(135deg, #43cea2, #185a9d);
+        color: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        font-size: 2.5em;
+        margin: 0;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+        background-color: #f4faff;
+      }
+
+      p {
+        font-size: 1.2em;
+        color: #444;
+        max-width: 800px;
+        text-align: center;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      iframe {
+        width: 100%;
+        max-width: 900px;
+        height: 500px;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+
+      .button {
+        background-color: #43cea2;
+        border: none;
+        border-radius: 25px;
+        padding: 15px 30px;
+        color: white;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .button:hover {
+        background-color: #185a9d;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>El Oído</h1>
+    </header>
+    <main>
+      <p>
+        El oído es el órgano que nos permite percibir sonidos. Está compuesto
+        por tres partes principales: el oído externo, el oído medio y el oído
+        interno, las cuales trabajan juntas para convertir las ondas sonoras en
+        señales eléctricas que el cerebro puede interpretar.
+      </p>
+
+      <!-- Spline iframe for ear model -->
+      <iframe
+        src="https://my.spline.design/airpodspro-e255caf5516c8c6021df1e16329eb97c/"
+        frameborder="0"
+      ></iframe>
+
+      <p>
+        El oído no solo es responsable de la audición, sino que también
+        desempeña un papel clave en el equilibrio. Las estructuras internas del
+        oído monitorean la posición y el movimiento de la cabeza, ayudándonos a
+        mantener el equilibrio.
+      </p>
+    </main>
+  </body>
+</html>
