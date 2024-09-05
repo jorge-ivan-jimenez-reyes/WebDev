@@ -14,7 +14,7 @@ Este proyecto es una aplicación web interactiva diseñada para permitir a los u
 
 ## 📂 Estructura del Proyecto
 
-```bash
+
 📁 src/
    ├── 📄 index.html   # Página principal del sitio web
    ├── 📂 assets/
@@ -23,7 +23,6 @@ Este proyecto es una aplicación web interactiva diseñada para permitir a los u
    ├── 📂 components/
    │   └── 📄 sidebar.js  # Funcionalidad del menú lateral
    └── 📄 model-heart.html  # Página dedicada al corazón con modelos 3D de Spline
-
 
 ## 💻 Funcionalidades Principales
 
