@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Corazón</title>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4faff;
+        color: #333;
+      }
+
+      header {
+        text-align: center;
+        padding: 40px 20px;
+        background: linear-gradient(135deg, #48c6ef, #6f86d6);
+        color: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        font-size: 2.5em;
+        margin: 0;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+        background-color: #f4faff;
+      }
+
+      p {
+        font-size: 1.2em;
+        color: #444;
+        max-width: 800px;
+        text-align: center;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      iframe {
+        width: 100%;
+        max-width: 900px;
+        height: 500px;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+
+      .button {
+        background-color: #48c6ef;
+        border: none;
+        border-radius: 25px;
+        padding: 15px 30px;
+        color: white;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .button:hover {
+        background-color: #6f86d6;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>El Corazón</h1>
+    </header>
+    <main>
+      <p>
+        El corazón es el órgano principal del sistema circulatorio. Su función
+        es bombear sangre a través de todo el cuerpo, suministrando oxígeno y
+        nutrientes a los tejidos y eliminando los desechos metabólicos.
+      </p>
+
+      <!-- Spline iframe for heart model -->
+      <iframe
+        src="https://my.spline.design/beatingheart-8ac0e1e33c17c4127bb193eca79a4887/"
+        frameborder="0"
+      ></iframe>
+
+      <p>
+        El corazón está dividido en cuatro cámaras: dos aurículas y dos
+        ventrículos. A través de su ritmo constante y controlado, mantiene la
+        circulación sanguínea y asegura el buen funcionamiento de todos los
+        órganos.
+      </p>
+    </main>
+  </body>
+</html>
