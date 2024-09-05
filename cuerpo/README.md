@@ -31,3 +31,8 @@ Este proyecto es una aplicación web interactiva diseñada para permitir a los u
 - **Menú lateral dinámico**: Un **sidebar** que permite la navegación entre las diferentes páginas de la aplicación, mejorando la usabilidad.
 - **Diseño responsivo**: El diseño del sitio web se adapta a cualquier tamaño de pantalla, asegurando una experiencia consistente tanto en dispositivos móviles como en pantallas grandes.
 
+## 🌐 Demo en Vivo
+
+Una demostración en vivo del proyecto está disponible en el siguiente enlace:
+
+[🔗 Ver demo en vivo](https://drive.google.com/file/d/1-viDxhppOkHBZ4WKTMWjhWy1y6aiCQgU/view)
