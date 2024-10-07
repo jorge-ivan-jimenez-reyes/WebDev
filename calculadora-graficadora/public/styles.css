@@ -1,26 +1,153 @@
-.container {
+/* Fondo de página */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #495057;
+  margin: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   padding: 20px;
 }
 
-.calculator,
-.grapher {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  width: 45%;
+/* Contenedor principal */
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  padding: 20px;
 }
 
-h1,
-h2 {
+/* Estilos para el título principal */
+h1 {
+  color: #343a40;
+  font-weight: 700;
   text-align: center;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-button {
-  margin-top: 10px;
+/* Estilos de las tarjetas (cards) */
+.card {
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
+/* Estilo para el display de la calculadora */
+.screen {
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #212529;
+  color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+/* Botones de la calculadora */
+.calculator-buttons button {
+  font-size: 1.2rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  padding: 10px 0;
+}
+
+.calculator-buttons .btn-lg {
+  padding: 18px;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(33, 37, 41, 0.3);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Botones específicos */
+.btn-warning {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #ffffff;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: #ffffff;
+}
+
+/* Pestañas */
+.nav-tabs .nav-link {
+  color: #495057;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: color 0.3s;
+  border-radius: 8px 8px 0 0;
+  margin: 0 5px;
+}
+
+.nav-tabs .nav-link.active {
+  color: #ffffff;
+  background-color: #007bff;
+}
+
+/* Tab Content */
+.tab-pane {
+  padding-top: 20px;
+}
+
+/* Estilos para el canvas */
 canvas {
-  margin-top: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  cursor: crosshair;
+  margin-top: 20px;
+}
+
+/* Botón de graficar */
+.btn-graficar {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-graficar:hover {
+  background-color: #0056b3;
+}
+
+/* Control para espaciado entre filas de botones de la calculadora */
+.calculator-buttons .row {
+  margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+  color: #6c757d;
+  text-align: center;
+  margin-top: 30px;
 }
