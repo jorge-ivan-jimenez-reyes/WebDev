@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.calculator,
+.grapher {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+h1,
+h2 {
+  text-align: center;
+}

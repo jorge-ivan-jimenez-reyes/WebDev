@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.calculator,
+.grapher {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 45%;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+button {
+  margin-top: 10px;
+}
+
+canvas {
+  margin-top: 10px;
+}
