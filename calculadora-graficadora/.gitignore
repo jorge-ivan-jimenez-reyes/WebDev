@@ -1,0 +1,42 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Logs
+logs
+*.log
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Editor y Sistema
+.DS_Store
+Thumbs.db
+
+# Configuración de Entornos
+.env
+.env.local
+.env.*.local
+
+# Directorios Temporales
+tmp/
+temp/
+.cache/
+.vscode/
+
+# Compilación y distribuciones
+dist/
+build/
+
+# Archivos de Sockets y PIDs
+*.pid
+*.seed
+*.pid.lock
+
+# Configuración de Jest
+jest/
