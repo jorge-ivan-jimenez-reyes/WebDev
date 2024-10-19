@@ -71,27 +71,42 @@ function performOperation() {
     document.getElementById("result").innerText = "Resultado: " + result;
 }
 
-// *** Graficadora de Funciones con opción de Dibujo Manual ***
+// *** Graficadora de Funciones y Parabola ***
 const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
-let drawing = false;
-let lastX = 0;
-let lastY = 0;
 
-// Cambia el modo de dibujo al seleccionar una función
 function plotFunction() {
     const funcType = document.getElementById("functionType").value;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     if (funcType === "manual") {
         enableDrawing();
+    } else if (funcType === "parabola") {
+        drawParabola();
     } else {
         disableDrawing();
         drawGraph(funcType);
     }
 }
 
-// Activa el dibujo manual
+// Función para dibujar la parábola y = x^2
+function drawParabola() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);  // Limpiar el canvas
+    ctx.beginPath();  // Iniciar el trazado de la parábola
+    
+    const scale = 20;  // Escala para ajustar el tamaño de la parábola
+    ctx.moveTo(0, canvas.height / 2);  // Empezar desde la mitad del canvas
+
+    for (let x = -canvas.width / 2; x < canvas.width / 2; x++) {
+        const y = Math.pow(x / scale, 2);  // Calcular y = x^2
+        ctx.lineTo(x + canvas.width / 2, canvas.height / 2 - y * scale);
+    }
+
+    ctx.strokeStyle = "#007bff";  // Estilo de la línea
+    ctx.lineWidth = 2;
+    ctx.stroke();  // Dibujar la parábola
+}
+
 function enableDrawing() {
     canvas.addEventListener("mousedown", startDrawing);
     canvas.addEventListener("mousemove", draw);
@@ -99,7 +114,6 @@ function enableDrawing() {
     canvas.addEventListener("mouseleave", stopDrawing);
 }
 
-// Desactiva el dibujo manual
 function disableDrawing() {
     canvas.removeEventListener("mousedown", startDrawing);
     canvas.removeEventListener("mousemove", draw);
@@ -107,13 +121,11 @@ function disableDrawing() {
     canvas.removeEventListener("mouseleave", stopDrawing);
 }
 
-// Inicia el dibujo al hacer clic
 function startDrawing(e) {
     drawing = true;
     [lastX, lastY] = getMousePosition(e);
 }
 
-// Dibuja al mover el ratón
 function draw(e) {
     if (!drawing) return;
     const [x, y] = getMousePosition(e);
@@ -126,18 +138,15 @@ function draw(e) {
     [lastX, lastY] = [x, y];
 }
 
-// Finaliza el dibujo
 function stopDrawing() {
     drawing = false;
 }
 
-// Obtiene la posición del ratón en el canvas
 function getMousePosition(event) {
     const rect = canvas.getBoundingClientRect();
     return [event.clientX - rect.left, event.clientY - rect.top];
 }
 
-// Dibuja gráficos de funciones matemáticas
 function drawGraph(funcType) {
     ctx.beginPath();
     ctx.strokeStyle = "#007bff";
