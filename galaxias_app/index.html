@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galaxias</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <h1>Listado de Galaxias</h1>
+    <table border="1" id="galaxias-table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script>
+      $(document).ready(function () {
+        $.ajax({
+          type: "GET",
+          url: "galaxias.xml",
+          dataType: "xml",
+          success: function (xml) {
+            $(xml)
+              .find("GALAXIA")
+              .each(function () {
+                var nombre = $(this).find("NOMBRE").text();
+                var descripcion = $(this).find("DESCRIPCION").text();
+                $("#galaxias-table tbody").append(
+                  "<tr><td>" + nombre + "</td><td>" + descripcion + "</td></tr>"
+                );
+              });
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
