@@ -1,0 +1,176 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content Styles */
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+input,
+textarea,
+select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  transition: all 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #007bff;
+  background-color: #fff;
+  outline: none;
+}
+
+button {
+  padding: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background-color: #28a745;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* List of Products */
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  background-color: #f8f9fa;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+ul li:hover {
+  transform: scale(1.02);
+}
+
+ul li strong {
+  font-size: 1.3rem;
+  color: #007bff;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+
+  main {
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  input,
+  textarea,
+  select,
+  button {
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 10px;
+  }
+}
