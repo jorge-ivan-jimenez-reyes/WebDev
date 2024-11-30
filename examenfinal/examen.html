@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook API Example</title>
+    <style>
+      table {
+        width: 50%;
+        border-collapse: collapse;
+        margin: 20px auto;
+        text-align: left;
+      }
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+      th {
+        background-color: #f4f4f4;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center">Información de Perfil de Facebook</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Localización</th>
+          <th>Imagen de Perfil</th>
+        </tr>
+      </thead>
+      <tbody id="profile-table"></tbody>
+    </table>
+
+    <script>
+      const ACCESS_TOKEN = "TU_TOKEN_DE_ACCESO"; // Sustituye con tu token de acceso
+      const PROFILE_ID = "me"; // 'me' para tu perfil o un ID específico
+      const FIELDS = "id,name,location,picture";
+
+      // URL de la API Graph
+      const URL = `https://graph.facebook.com/v12.0/${PROFILE_ID}?fields=${FIELDS}&access_token=${ACCESS_TOKEN}`;
+
+      // Realiza la solicitud
+      fetch(URL)
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.error) {
+            console.error("Error en la API:", data.error.message);
+            return;
+          }
+
+          // Extraer los datos
+          const id = data.id || "N/A";
+          const name = data.name || "N/A";
+          const location = data.location?.name || "N/A";
+          const picture = data.picture?.data?.url || "N/A";
+
+          // Crear una fila en la tabla
+          const tableBody = document.getElementById("profile-table");
+          tableBody.innerHTML = `
+                    <tr>
+                        <td>${id}</td>
+                        <td>${name}</td>
+                        <td>${location}</td>
+                        <td><img src="${picture}" alt="Profile Picture" style="width:50px;height:50px;"></td>
+                    </tr>
+                `;
+        })
+        .catch((error) => console.error("Error en la solicitud:", error));
+    </script>
+  </body>
+</html>
